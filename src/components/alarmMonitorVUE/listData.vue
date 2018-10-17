@@ -26,21 +26,21 @@
                     </el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="开始时间：" requireq prop="startData">
-                <el-date-picker
-                    type="data"
-                    placeholder="选择开始日期"
-                    v-model="ruleForm.startData" >
-                </el-date-picker>
-            </el-form-item>
-            <el-form-item label="结束时间：" requireq prop="endData">
-                <el-time-picker
-                    type="fixed-time"
-                    placeholder="选择结束日期"
-                    v-model="ruleForm.endData">
+            <!--<el-form-item label="开始时间：" requireq prop="startData">-->
+                <!--<el-date-picker-->
+                    <!--type="data"-->
+                    <!--placeholder="选择开始日期"-->
+                    <!--v-model="ruleForm.startData" >-->
+                <!--</el-date-picker>-->
+            <!--</el-form-item>-->
+            <!--<el-form-item label="结束时间：" requireq prop="endData">-->
+                <!--<el-time-picker-->
+                    <!--type="fixed-time"-->
+                    <!--placeholder="选择结束日期"-->
+                    <!--v-model="ruleForm.endData">-->
 
-                </el-time-picker>
-            </el-form-item>
+                <!--</el-time-picker>-->
+            <!--</el-form-item>-->
             <el-form-item label="即使配送：" prop="delivery">
                 <el-switch v-model="ruleForm.delivery"></el-switch>
             </el-form-item>
@@ -86,18 +86,37 @@
                 sizeSmall: 'small',
 //                查询条件
                 ruleForm: {
-                    name: '',
-                    region: '',
-                    startData: '',
-                    endData: '',
-                    delivery: '',
-                    type: [],
-                    resource: '',
-                    desc: ''
+                    name: '',          //  活动名称
+                    region: '',        //  活动区域
+                    startData: '',     //  开始时间
+                    endData: '',       //  结束时间
+                    delivery: '',      //  即使配送
+                    type: [],          //  活动性质
+                    resource: '',      // 特殊资源
+                    desc: ''           // 活动形式
                 },
                 rules: {
                     name: [
-                         {required: true, message: '请输入活动名称', trigger: 'blur'}
+                         {required: true, message: '请输入活动名称', trigger: 'blur'},
+                         {min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur'}
+                    ],
+                    region: [
+                        {required: true, message: '请输入活动区域', trigger: 'change'}
+                    ],
+//                    startData: [
+//                        {type: 'data', required: true, messge: '请输入开始时间', trigger: 'change'}
+//                    ],
+//                    endData: [
+//                        {type: 'data', required: true, message: '请输入结束时间', trigger: 'change'}
+//                    ],
+                    type: [
+                        {type: 'array', required: true, message: '请输入活动性质', trigger: 'change'}
+                    ],
+                    resource: [
+                        {required: true, message: '请输入特殊资源', trigger: 'blur'}
+                    ],
+                    desc: [
+                        {required: true, message: '请输入活动形式', trigger: 'blur'}
                     ]
                 },
                 regionOpiton: [],
@@ -139,7 +158,7 @@
         methods: {
             regionChange() {},
             submitForm(formName) {
-                this.$refs[formName].validata((valid) => {
+                this.$refs[formName].validate((valid) => {
                     if (valid) {
                         console.log(11);
                     } else {
