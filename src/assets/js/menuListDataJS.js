@@ -68,12 +68,12 @@ export const demoMenuList = [
                 active: 'active'
             },
             {
-                href: '',
+                href: '/analysisTool',
                 content: '证券运行监测',
                 active: 'active'
             },
             {
-                href: '',
+                href: '/analysisTool',
                 content: '分类投资者监测',
                 active: 'active'
             },
