@@ -12,34 +12,34 @@
     </div>
 </template>
 <script>
-    export default {
-        name: 'select-option',
-        components: {},
-        computed: {},
-        data() {
-            return {
-                selectData: 'ALL',
-                optionData: [
-                    {
-                        value: 'ALL',
-                        label: '全部'
-                    },
-                    {
-                        value: 'A',
-                        label: '上交所'
-                    }
-                ]
-            };
+export default {
+  name: "select-option",
+  components: {},
+  computed: {},
+  data() {
+    return {
+      selectData: "ALL",
+      optionData: [
+        {
+          value: "ALL",
+          label: "全部"
         },
-        mounted() {},
-        methods: {}
+        {
+          value: "A",
+          label: "上交所"
+        }
+      ]
     };
+  },
+  mounted() {},
+  methods: {}
+};
 </script>
-<style lang="less">
-    @import '../../assets/style/config.less';  // 引入全局样式
+<style lang="less" scoped>
+@import "../../assets/style/config.less"; // 引入全局样式
 
-    .select-option {
-        font-size: @g-fontSize;
-        width: 500px;
-    }
+.select-option {
+  font-size: @g-fontSize;
+  width: 500px;
+}
 </style>

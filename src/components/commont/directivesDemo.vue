@@ -49,131 +49,132 @@
     </div>
 </template>
 <script>
-    /* eslint-disable no-multi-spaces */
-    import MixinVue from './Mixin';
-    export default {
-        name: 'directives-demo',
-        // 父传子！
-        props: {
-        // status: {
-        //    type: String,
-        //    required: true,
-        //    validator: function(value) {
-        //        return [
-        //                'syncing',
-        //                'synced',
-        //                'version-conflict',
-        //                'error'
-        //            ].indexOf(value) !== -1;
-        //    }
-        // }
-        },
-        // 注册组件
-        // 单词大写开头 (PascalCase)，要么始终是横线连接 (kebab-case)。
-        components: {
-            BreadCrumb: () => import('@/components/commont/breadCrumbs')
-        },
-        // 混入, 是一个类的继承，类似于一个公共的方法。
-        mixins: [MixinVue],
-        // 存储数据
-        data() {
-            return {
-                url: 'https://cn.vuejs.org/v2/guide/syntax.html#%E6%96%87%E6%9C%AC',
-                message: 'Hello',
-                cardType: 'ALL',
-                isActive: true,
-                isActives: true,
-                hasError: true,
-                isActivea: true,
-                error: null,
-                classObject: {
-                    active: true,
-                    'text-danger': true
-                },
-                activeClass: 'active',
-                errorClass: 'text-danger',
-                isActiveb: false,
-                activeClassb: 'isActiveb33',
-                errorClassb: 'text-dangebbb',
-                isActivef: false,
-                newHeight: 30,
-                activeColor: 'red',
-                fontSize: 20,
-                styleObject: {
-                    color: 'blue',
-                    fontSize: '13px'
-                },
-                baseStyles: {
-                    color: 'green',
-                    fontSize: '16px'
-                },
-                overridingStyles: {
-                    height: '40px'
-                },
-                aa: 11,
-                htmlText: '4532324',
-                demoFullName: 'Foo Bar',
-                full: 'Foo',
-                last: 'Bar'
-            };
-        },
-        // 计算属性
-        computed: {
-            // 计算属性和侦听器
-            reversedMessage: function() {
-                return this.message.split('').reverse('').join('(~.~)');
-            },
-            classObjecta() {
-                return {
-                    activea: this.isActivea && !this.error,
-                    'text-dangera': this.error && this.error.type === 'fatal'
-                };
-            }
-//            newHeight() {
-//                return this.height ?  Number(this.height) - 8 : this.height;
-//            }
-        },
-        watch: {
-//            full(val) {
-//                this.demoFullName = val + '11' + this.last;
-//            },
-//            last(val) {
-//                this.demoFullName = this.full + '22' + val;
-//            }
-            demoFullName() {
-//                return this.full + '1111' + this.last;
-            }
-        },
-        //  数据交互
-        methods: {
-            // 私有属性名,我们推荐把这两个前缀结合为 $_，作为一个用户定义的私有属性的约定，以确保不会和 Vue 自身相冲突。
-            $_myGreatMixin_update: function() {
-                // ...
-            },
-            doSomething: function() {
-            },
-            handleCreditChange(val) {
-                this.cardType = this.getForm(val);
-                console.log(this.showTable);
-            }
-        },
-        // 在一个实例被创建之后执行代码
-        created() {
-            console.log(this.aa);
-        },
-        // 初始化数据
-        mounted() {
-            // this.handleCreditChange();
-        },
-        beforeDestroy() {}
+/* eslint-disable no-multi-spaces */
+import MixinVue from "./Mixin";
+export default {
+  name: "directives-demo",
+  // 父传子！
+  props: {
+    // status: {
+    //    type: String,
+    //    required: true,
+    //    validator: function(value) {
+    //        return [
+    //                'syncing',
+    //                'synced',
+    //                'version-conflict',
+    //                'error'
+    //            ].indexOf(value) !== -1;
+    //    }
+    // }
+  },
+  // 注册组件
+  // 单词大写开头 (PascalCase)，要么始终是横线连接 (kebab-case)。
+  components: {
+    BreadCrumb: () => import("@/components/commont/breadCrumbs")
+  },
+  // 混入, 是一个类的继承，类似于一个公共的方法。
+  mixins: [MixinVue],
+  // 存储数据
+  data() {
+    return {
+      url: "https://cn.vuejs.org/v2/guide/syntax.html#%E6%96%87%E6%9C%AC",
+      message: "Hello",
+      cardType: "ALL",
+      isActive: true,
+      isActives: true,
+      hasError: true,
+      isActivea: true,
+      error: null,
+      classObject: {
+        active: true,
+        "text-danger": true
+      },
+      activeClass: "active",
+      errorClass: "text-danger",
+      isActiveb: false,
+      activeClassb: "isActiveb33",
+      errorClassb: "text-dangebbb",
+      isActivef: false,
+      newHeight: 30,
+      activeColor: "red",
+      fontSize: 20,
+      styleObject: {
+        color: "blue",
+        fontSize: "13px"
+      },
+      baseStyles: {
+        color: "green",
+        fontSize: "16px"
+      },
+      overridingStyles: {
+        height: "40px"
+      },
+      aa: 11,
+      htmlText: "4532324",
+      demoFullName: "Foo Bar",
+      full: "Foo",
+      last: "Bar"
     };
+  },
+  // 计算属性
+  computed: {
+    // 计算属性和侦听器
+    reversedMessage: function() {
+      return this.message
+        .split("")
+        .reverse("")
+        .join("(~.~)");
+    },
+    classObjecta() {
+      return {
+        activea: this.isActivea && !this.error,
+        "text-dangera": this.error && this.error.type === "fatal"
+      };
+    }
+    //            newHeight() {
+    //                return this.height ?  Number(this.height) - 8 : this.height;
+    //            }
+  },
+  watch: {
+    //            full(val) {
+    //                this.demoFullName = val + '11' + this.last;
+    //            },
+    //            last(val) {
+    //                this.demoFullName = this.full + '22' + val;
+    //            }
+    demoFullName() {
+      //                return this.full + '1111' + this.last;
+    }
+  },
+  //  数据交互
+  methods: {
+    // 私有属性名,我们推荐把这两个前缀结合为 $_，作为一个用户定义的私有属性的约定，以确保不会和 Vue 自身相冲突。
+    $_myGreatMixin_update: function() {
+      // ...
+    },
+    doSomething: function() {},
+    handleCreditChange(val) {
+      this.cardType = this.getForm(val);
+      console.log(this.showTable);
+    }
+  },
+  // 在一个实例被创建之后执行代码
+  created() {
+    console.log(this.aa);
+  },
+  // 初始化数据
+  mounted() {
+    // this.handleCreditChange();
+  },
+  beforeDestroy() {}
+};
 </script>
 
-<style lang="less">
-    .directives-demo{
+<style lang="less" scoped>
+// .directives-demo {
+// }
 
-    }
-
-    @import url('../../assets/style/common.less');
-    @import url('../../assets/style/icon.less');
+// @import url("../../assets/style/common.less");
+// @import url("../../assets/style/icon.less");
 </style>

@@ -15,31 +15,31 @@
 </template>
 
 <script>
-    /* eslint-disable indent,linebreak-style,space-before-blocks,semi */
+/* eslint-disable indent,linebreak-style,space-before-blocks,semi */
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: [],
-//  components: [breadcrumb],
-  data(){
-      return {
-// 面包屑1
-//          breadcrumbItems: [
-//              {
-//                  router: '/HelloWorld',   // List_test10
-//                  label: '设置列表(T)'
-//              }
-//          ]
-      }
-    }
+  //  components: [breadcrumb],
+  data() {
+    return {
+      // 面包屑1
+      //          breadcrumbItems: [
+      //              {
+      //                  router: '/HelloWorld',   // List_test10
+      //                  label: '设置列表(T)'
+      //              }
+      //          ]
+    };
+  }
 };
 </script>
 
-<style lang="less">
-    @import '../assets/style/config.less';  // 引入全局样式
+<style lang="less" scoped>
+@import "../assets/style/config.less"; // 引入全局样式
 
-    p {
-        font-size: @g-fontSize;
-        width: 500px;
-        background-color: @g-color;
-    }
+p {
+  font-size: @g-fontSize;
+  width: 500px;
+  background-color: @g-color;
+}
 </style>

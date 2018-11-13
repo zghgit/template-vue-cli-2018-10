@@ -1,0 +1,44 @@
+﻿@import './config.less'; // 配置变量
+// @import './theme_add';
+// 系统
+@import './common/keyframes.less'; // 动画
+
+// ------------------------------------初始化全局样式-----------------------------------------
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+body {
+     font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    font-size: @g-fontSize;
+    color: @g-color;
+    background-color: @g-backgroundColor;
+    &.lock {
+        overflow: hidden;
+    }
+}
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    height: 100%;
+    background-color: rgb(27, 43, 78);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+// 清除浮动
+// form 表单 input 输入自适应宽度及内容超出显示省略号
+el-form-input{
+    width: auto;
+}
+.el-form-input .el-input__inner{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+// ------------------------------------框架-----------------------------------------

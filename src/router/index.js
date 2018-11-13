@@ -22,26 +22,25 @@ import AlarmMonitorIndexChildren from './alarmMonitor/index'; // 预警监控
 Vue.use(Router);
 
 export default new Router({
-    routes: [
-        {
+    routes: [{
             path: '/',
             name: 'HomePage',
-            component: function(resolve) {
-                require(['@/views/homePage'], resolve);   // 首页
+            component: function (resolve) {
+                require(['@/views/homePage'], resolve); // 首页
             }
         },
         {
             path: '/homePage',
             name: 'HomePage',
-            component: function(resolve) {
-                require(['@/views/homePage'], resolve);   // 首页
+            component: function (resolve) {
+                require(['@/views/homePage'], resolve); // 首页
             }
         },
         {
             path: '/alarmMonitor',
             name: 'AlarmMonitor',
-            component: function(resolve) {
-                require(['@/views/alarmMonitor'], resolve);   // 预警监控
+            component: function (resolve) {
+                require(['@/views/alarmMonitor'], resolve); // 预警监控
             }
             // children: []
         },
@@ -49,78 +48,78 @@ export default new Router({
         {
             path: '/analysisTool',
             name: 'AnalysisTool',
-            component: function(resolve) {
-                require(['@/views/analysisTool'], resolve);    // 分析工具
+            component: function (resolve) {
+                require(['@/views/analysisTool'], resolve); // 分析工具
             }
         },
         {
             path: '/businessAudit',
             name: 'BusinessAudit',
-            component: function(resolve) {
-                require(['@/views/businessAudit'], resolve);   // 操作日志审计
+            component: function (resolve) {
+                require(['@/views/businessAudit'], resolve); // 操作日志审计
             }
         },
         {
             path: '/earlyWarning',
             name: 'EarlyWarning',
-            component: function(resolve) {
-                require(['@/views/earlyWarning'], resolve);   // 预警管理
+            component: function (resolve) {
+                require(['@/views/earlyWarning'], resolve); // 预警管理
             }
         },
         {
             path: '/knowledgeBase',
             name: 'KnowledgeBase',
-            component: function(resolve) {
-                require(['@/views/knowledgeBase'], resolve);  // 知识库
+            component: function (resolve) {
+                require(['@/views/knowledgeBase'], resolve); // 知识库
             }
         },
         {
             path: '/marketStability',
             name: 'MarketStability',
-            component: function(resolve) {
-                require(['@/views/marketStability'], resolve);  // 舆情监测
+            component: function (resolve) {
+                require(['@/views/marketStability'], resolve); // 舆情监测
             }
         },
         {
             path: '/marketSupervise',
             name: 'marketSupervise',
-            component: function(resolve) {
-                require(['@/views/marketSupervise'], resolve);  // 市场运行监测
+            component: function (resolve) {
+                require(['@/views/marketSupervise'], resolve); // 市场运行监测
             }
         },
         {
             path: '/publicSupervise',
             name: 'publicSupervise',
-            component: function(resolve) {
-                require(['@/views/publicSupervise'], resolve);  // 业务审计
+            component: function (resolve) {
+                require(['@/views/publicSupervise'], resolve); // 业务审计
             }
         },
         {
             path: '/sensation',
             name: 'Sensation',
-            component: function(resolve) {
-                require(['@/views/sensation'], resolve);   // 工作统计
+            component: function (resolve) {
+                require(['@/views/sensation'], resolve); // 工作统计
             }
         },
         {
             path: '/superviseTask',
             name: 'superviseTask',
-            component: function(resolve) {
-                require(['@/views/superviseTask'], resolve);   // 监察任务
+            component: function (resolve) {
+                require(['@/views/superviseTask'], resolve); // 监察任务
             }
         },
         {
             path: '/systemManage',
             name: 'SystemManage',
-            component: function(resolve) {
-                require(['@/views/systemManage'], resolve);   // 系统管理
+            component: function (resolve) {
+                require(['@/views/systemManage'], resolve); // 系统管理
             }
         },
         {
             path: '/workStatistics',
             name: 'WorkStatistics',
-            component: function(resolve) {
-                require(['@/views/workStatistics'], resolve);   // 系统管理-模块管理
+            component: function (resolve) {
+                require(['@/views/workStatistics'], resolve); // 系统管理-模块管理
             }
         }
     ]

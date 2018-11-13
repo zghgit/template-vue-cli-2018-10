@@ -19,20 +19,16 @@
     </div>
 </template>
 <script>
-    export default {
-        props: ['breadcrumbList'],
-        data() {
-            return {
-
-            };
-        },
-        methods: {
-
-        }
-    };
+export default {
+  props: ["breadcrumbList"],
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
-<style lang="scss" scoped>
-    .breadcrumb {
-        color: red;
-    }
+<style lang="less" scoped>
+.breadcrumb {
+  color: red;
+}
 </style>

@@ -67,117 +67,120 @@
     </div>
 </template>5
 <script>
-    export default {
-        name: 'list-Data',
-        components: {
-            BreadCrumb: () => import('@/components/commont/breadCrumbs')
-        },
-        computed: {},
-        data() {
-            return {
-              // 面包须
-                breadcrumbs: [
-                    {
-                        router: '/listData',
-                        label: '列表数据'
-                    }
-                ],
-                // 表单的大小
-                sizeSmall: 'small',
-//                查询条件
-                ruleForm: {
-                    name: '',          //  活动名称
-                    region: '',        //  活动区域
-                    startData: '',     //  开始时间
-                    endData: '',       //  结束时间
-                    delivery: '',      //  即使配送
-                    type: [],          //  活动性质
-                    resource: '',      // 特殊资源
-                    desc: ''           // 活动形式
-                },
-                rules: {
-                    name: [
-                         {required: true, message: '请输入活动名称', trigger: 'blur'},
-                         {min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur'}
-                    ],
-                    region: [
-                        {required: true, message: '请输入活动区域', trigger: 'change'}
-                    ],
-//                    startData: [
-//                        {type: 'data', required: true, messge: '请输入开始时间', trigger: 'change'}
-//                    ],
-//                    endData: [
-//                        {type: 'data', required: true, message: '请输入结束时间', trigger: 'change'}
-//                    ],
-                    type: [
-                        {type: 'array', required: true, message: '请输入活动性质', trigger: 'change'}
-                    ],
-                    resource: [
-                        {required: true, message: '请输入特殊资源', trigger: 'blur'}
-                    ],
-                    desc: [
-                        {required: true, message: '请输入活动形式', trigger: 'blur'}
-                    ]
-                },
-                regionOpiton: [],
-                typeList: [
-                    {
-                        name: '中学',
-                        label: '01'
-                    },
-                    {
-                        name: '初中',
-                        label: '02'
-                    },
-                    {
-                        name: '高中',
-                        label: '03'
-                    },
-                    {
-                        name: '大学',
-                        label: '04'
-                    }
-                ],
-                resourceRadio: [
-                    {
-                        key: 'A',
-                        name: '中国'
-                    },
-                    {
-                        key: 'B',
-                        name: '美国'
-                    },
-                    {
-                        key: 'C',
-                        name: '日本'
-                    }
-                ]
-            };
-        },
-        mounted() {},
-        methods: {
-            regionChange() {},
-            submitForm(formName) {
-                this.$refs[formName].validate((valid) => {
-                    if (valid) {
-                        console.log(11);
-                    } else {
-                        console.log(222);
-                        return false;
-                    }
-                });
-            },
-            restForm(formName) {
-                this.$refs[formName].resetFields();
-            }
+export default {
+  name: "list-Data",
+  components: {
+    BreadCrumb: () => import("@/components/commont/breadCrumbs")
+  },
+  computed: {},
+  data() {
+    return {
+      // 面包须
+      breadcrumbs: [
+        {
+          router: "/listData",
+          label: "列表数据"
         }
+      ],
+      // 表单的大小
+      sizeSmall: "small",
+      //                查询条件
+      ruleForm: {
+        name: "", //  活动名称
+        region: "", //  活动区域
+        startData: "", //  开始时间
+        endData: "", //  结束时间
+        delivery: "", //  即使配送
+        type: [], //  活动性质
+        resource: "", // 特殊资源
+        desc: "" // 活动形式
+      },
+      rules: {
+        name: [
+          { required: true, message: "请输入活动名称", trigger: "blur" },
+          { min: 3, max: 5, message: "长度在 3 到 5 个字符", trigger: "blur" }
+        ],
+        region: [
+          { required: true, message: "请输入活动区域", trigger: "change" }
+        ],
+        //                    startData: [
+        //                        {type: 'data', required: true, messge: '请输入开始时间', trigger: 'change'}
+        //                    ],
+        //                    endData: [
+        //                        {type: 'data', required: true, message: '请输入结束时间', trigger: 'change'}
+        //                    ],
+        type: [
+          {
+            type: "array",
+            required: true,
+            message: "请输入活动性质",
+            trigger: "change"
+          }
+        ],
+        resource: [
+          { required: true, message: "请输入特殊资源", trigger: "blur" }
+        ],
+        desc: [{ required: true, message: "请输入活动形式", trigger: "blur" }]
+      },
+      regionOpiton: [],
+      typeList: [
+        {
+          name: "中学",
+          label: "01"
+        },
+        {
+          name: "初中",
+          label: "02"
+        },
+        {
+          name: "高中",
+          label: "03"
+        },
+        {
+          name: "大学",
+          label: "04"
+        }
+      ],
+      resourceRadio: [
+        {
+          key: "A",
+          name: "中国"
+        },
+        {
+          key: "B",
+          name: "美国"
+        },
+        {
+          key: "C",
+          name: "日本"
+        }
+      ]
     };
-</script>
-<style lang="less">
-    @import '../../assets/style/config.less';  // 引入全局样式
-
-    .list-Data {
-        font-size: @g-fontSize;
-        width: 500px;
+  },
+  mounted() {},
+  methods: {
+    regionChange() {},
+    submitForm(formName) {
+      this.$refs[formName].validate(valid => {
+        if (valid) {
+          console.log(11);
+        } else {
+          console.log(222);
+          return false;
+        }
+      });
+    },
+    restForm(formName) {
+      this.$refs[formName].resetFields();
     }
+  }
+};
+</script>
+<style lang="less" scoped>
+@import "../../assets/style/config.less"; // 引入全局样式
+
+.list-Data {
+  font-size: @g-fontSize;
+  width: 500px;
+}
 </style>

@@ -5,7 +5,7 @@ import App from './App';
 import router from './router';
 // import 'lib-flexible/flexible'; // rem 支持用---这里会影响 ElementUI 不能使用
 import ElementUI from 'element-ui';
-// import 'element-ui/lib/theme-chalk/index.css';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
@@ -15,5 +15,7 @@ new Vue({
     el: '#app',
     router,
     template: '<App/>',
-    components: { App }
+    components: {
+        App
+    }
 });

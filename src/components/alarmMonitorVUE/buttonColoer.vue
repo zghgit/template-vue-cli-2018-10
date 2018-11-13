@@ -5,22 +5,22 @@
     </div>
 </template>
 <script>
-    export default {
-        name: 'button-coloer',
-        components: {},
-        computed: {},
-        data() {
-            return {};
-        },
-        mounted() {},
-        methods: {}
-    };
+export default {
+  name: "button-coloer",
+  components: {},
+  computed: {},
+  data() {
+    return {};
+  },
+  mounted() {},
+  methods: {}
+};
 </script>
-<style lang="less">
-    @import '../../assets/style/config.less';  // 引入全局样式
+<style lang="less" scoped>
+@import "../../assets/style/config.less"; // 引入全局样式
 
-    p {
-        font-size: @g-fontSize;
-        width: 500px;
-    }
+p {
+  font-size: @g-fontSize;
+  width: 500px;
+}
 </style>
