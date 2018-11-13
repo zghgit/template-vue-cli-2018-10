@@ -5,7 +5,8 @@
             <img src="../../assets/img/hide.jpg" alt="菜单展开" class="logo-open">
         </div>
         <ul class="nav-top">
-            <li v-on:click="toggleMenu()">
+            <li v-on:mouseenter="toggleMenu()"
+                v-on:mouseleave="heidMenu()">
                 <i v-if="navIcons" v-bind:class="navIcon"></i>
                 <i v-else v-bind:class="backIcon"></i>
             </li>
@@ -73,7 +74,11 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.navIcons = !this.navIcons;
+      this.navIcons = true;
+      this.$emit("isMenuEvent", this.navIcons);
+    },
+    heidMenu() {
+      this.navIcons = false;
       this.$emit("isMenuEvent", this.navIcons);
     },
     showRole() {
@@ -95,7 +100,7 @@ export default {
   box-shadow: none;
   border-bottom: 1px solid #f3eeee33;
   background-color: #1b2b4e;
-  // box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.03);
   position: fixed;
   top: 0;
   // margin-left: 200px;
@@ -127,7 +132,8 @@ export default {
     > li {
       line-height: 56px;
       float: left;
-      // color: rgb(174, 192, 230);
+      // color: #e9ebf1f0;
+      color: rgb(174, 192, 230);
       font-size: 14px;
       // font-weight: 700;
       padding-right: 14px;
