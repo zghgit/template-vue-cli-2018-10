@@ -34,8 +34,8 @@ export default {
           label: "Class 与 Style 绑定"
         },
         {
-          router: "/77",
-          label: "Class 与 Style 绑定"
+          router: "/conditionalRendering",
+          label: "条件渲染"
         },
         {
           router: "",

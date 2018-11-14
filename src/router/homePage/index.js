@@ -15,11 +15,13 @@ const homePageRouter = {
                 require(['@/components/homePageVUE/classStyle.vue'], resolve)
             }
         },
-        // {
-        //     path: '',
-        //     name: '',
-        //     component: function () {}
-        // },
+        {
+            path: '/conditionalRendering',
+            name: '条件渲染',
+            component: function (resolve) {
+                require(['@/components/homePageVUE/conditionalRendering.vue'], resolve)
+            }
+        },
         // {
         //     paht: '',
         //     name: '',
