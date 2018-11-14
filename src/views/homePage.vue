@@ -19,9 +19,7 @@
 export default {
   name: "home-page",
   components: {
-    BreadCrumb: () => import("@/components/commont/breadCrumbs"),
-    MenuList: () => import("@/components/commont/menuList"),
-    ExtentCompetence: () => import("@/components/commont/extentCompetence")
+    BreadCrumb: () => import("@/components/commont/breadCrumbs")
   },
   data() {
     return {
@@ -29,7 +27,27 @@ export default {
       breadcrumbItems: [
         {
           router: "/homePage",
-          label: "首页"
+          label: "首页-指令"
+        },
+        {
+          router: "/classStyle",
+          label: "Class 与 Style 绑定"
+        },
+        {
+          router: "/77",
+          label: "Class 与 Style 绑定"
+        },
+        {
+          router: "",
+          label: "对象语法"
+        },
+        {
+          router: "",
+          label: "数组语法"
+        },
+        {
+          router: "",
+          label: "用在组件上"
         }
       ]
     };

@@ -7,7 +7,9 @@
                 v-for="(item, index) in breadcrumbList"
                 :to="{path:item.router}"
                 :key="index">
-                {{item.label}}
+               <span class="brLiet">
+                    {{item.label}}
+               </span>
             </el-breadcrumb-item>
 
         </el-breadcrumb>
@@ -29,6 +31,13 @@ export default {
 </script>
 <style lang="less" scoped>
 .breadcrumb {
-  color: red;
+  display: flex;
+  justify-content: space-between;
+  .brLiet {
+    color: #aec0e6 !important;
+  }
+  .widget {
+    color: #fff;
+  }
 }
 </style>

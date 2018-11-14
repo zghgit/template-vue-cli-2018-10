@@ -4,19 +4,7 @@
         <extent-competence @isMenuEvent="isMenuEvent"></extent-competence>
         <!--左侧菜单-->
           <demo-menu-list v-show="isMenu"></demo-menu-list>
-        <!--<AppSidebar :style="{ width: sidebarWidth + 'px' }">-->
-        <!--指令缩写 (用 : 表示 v-bind: 和用 @ 表示 v-on:) 应该要么都用要么都不用。-->
-        <!--<input-->
-            <!--:value="newTodoText"-->
-            <!--:placeholder="newTodoInstructions"-->
-        <!--&gt;-->
-        <!--<input-->
-            <!--@input="onInput"-->
-            <!--@focus="onFocus"-->
-        <!--&gt;-->
-
-       
-        <!--vue视图-->
+        <!-- vue视图 -->
         <div v-bind:class="[!isMenu ? 'routerView' : 'viewMl']">
             <router-view></router-view>
         </div>
@@ -73,7 +61,6 @@ export default {
   // 注册组件
   // 单词大写开头 (PascalCase)，要么始终是横线连接 (kebab-case)。
   components: {
-    // BreadCrumb: () => import('@/components/commont/breadCrumbs'),
     DemoMenuList: () => import("@/components/commont/menuList"),
     ExtentCompetence: () => import("@/components/commont/extentCompetence")
   },
@@ -82,7 +69,7 @@ export default {
   // 存储数据
   data() {
     return {
-      isMenu: false
+      isMenu: true
     };
   },
   // 计算属性
@@ -124,13 +111,6 @@ export default {
   padding: 20px;
 }
 #app {
-  // font-family: "Avenir", Helvetica, Arial, sans-serif;
-  // text-align: center;
-  // color: #2c3e50;
-  // border: 1px solid red;
-  // border-radius: 20px;
-  // display: flex;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;

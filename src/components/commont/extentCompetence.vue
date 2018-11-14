@@ -5,8 +5,7 @@
             <img src="../../assets/img/hide.jpg" alt="菜单展开" class="logo-open">
         </div>
         <ul class="nav-top">
-            <li v-on:mouseenter="toggleMenu()"
-                v-on:mouseleave="heidMenu()">
+            <li v-on:click="toggleMenu()">
                 <i v-if="navIcons" v-bind:class="navIcon"></i>
                 <i v-else v-bind:class="backIcon"></i>
             </li>
@@ -74,11 +73,7 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.navIcons = true;
-      this.$emit("isMenuEvent", this.navIcons);
-    },
-    heidMenu() {
-      this.navIcons = false;
+      this.navIcons = !this.navIcons;
       this.$emit("isMenuEvent", this.navIcons);
     },
     showRole() {
@@ -98,8 +93,9 @@ export default {
   height: 56px;
   box-sizing: border-box;
   box-shadow: none;
-  border-bottom: 1px solid #f3eeee33;
-  background-color: #1b2b4e;
+  // border-bottom: 1px solid #f3eeee33;
+  border-right: 1px solid rgba(255, 255, 255, 0.0470588);
+  background-color: rgba(27, 43, 78, 0.85098);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.03);
   position: fixed;
   top: 0;
@@ -132,7 +128,6 @@ export default {
     > li {
       line-height: 56px;
       float: left;
-      // color: #e9ebf1f0;
       color: rgb(174, 192, 230);
       font-size: 14px;
       // font-weight: 700;
@@ -150,7 +145,7 @@ export default {
         width: 15px;
         text-align: center;
         display: block;
-        // color: rgb(174, 192, 230);
+        color: rgb(174, 192, 230);
         cursor: pointer;
         > .ivu-icon {
           font-size: 15px;
@@ -168,7 +163,7 @@ export default {
     > div {
       margin-top: 6px;
       padding: 6px;
-      // border: 1px solid rgba(255, 255, 255, 0.0470588);
+      border: 1px solid rgba(255, 255, 255, 0.0470588);
       display: flex;
       align-items: center;
       > img {
@@ -177,7 +172,7 @@ export default {
       }
       > span {
         font-size: 14px;
-        // color: rgb(115, 121, 136);
+        color: rgb(115, 121, 136);
         color: #e9ebf1f0;
       }
       > i {
@@ -198,7 +193,7 @@ export default {
       border-radius: 2px;
       padding: 0;
       z-index: 999;
-      // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176);
       overflow: hidden;
       position: relative;
       display: none;
@@ -212,7 +207,7 @@ export default {
         background-color: #e5e5e5;
       }
       > li {
-        // background-color: rgba(27, 43, 78);
+        background-color: rgba(27, 43, 78, 0.85098);
         padding: 0 15px;
         > a {
           height: 40px;
@@ -225,7 +220,7 @@ export default {
             color: #00a9e8;
           }
           > i {
-            // color: rgba(214, 214, 253, 0.96);
+            color: rgba(214, 214, 253, 0.96);
             margin-right: 5px;
             width: 18px;
             height: 18px;
@@ -233,7 +228,7 @@ export default {
             line-height: 18px;
           }
           > span {
-            // color: rgba(214, 214, 253, 0.96);
+            color: rgba(214, 214, 253, 0.96);
             font-size: 14px;
           }
           &:hover {
@@ -243,7 +238,7 @@ export default {
           }
         }
         &:hover {
-          // background-color: rgba(27, 43, 78);
+          background-color: rgba(27, 43, 78, 0.85098);
         }
         &:hover span {
           color: #00a9e8;

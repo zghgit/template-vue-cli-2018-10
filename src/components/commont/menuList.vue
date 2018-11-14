@@ -58,9 +58,9 @@ export default {
   box-shadow: none;
   // border-color: rgb(27, 43, 78);
   // background: #424f63;
-  // background-color: rgba(27, 43, 78, 0.85098);
-  // border-right: 1px solid rgba(255, 255, 255, 0.0470588);
-  // background-color: rgba(27, 43, 78);
+  // background-color: #1b2b4e;
+  background-color: rgba(27, 43, 78, 0.85098);
+  border-right: 1px solid rgba(255, 255, 255, 0.0470588);
   z-index: 1;
   > ul {
     width: 100%;
@@ -103,7 +103,6 @@ export default {
         }
         &.active {
           color: rgb(174, 192, 230);
-          // background-color: #00a9e8;
           background-color: #03171f4f;
         }
       }
@@ -112,7 +111,8 @@ export default {
         list-style: none;
       }
       > .childFirst {
-        background-color: rgba(10, 20, 41, 0.952941);
+        // background-color: rgba(10, 20, 41, 0.952941);
+        background-color: rgba(10, 20, 41, 0.3);
         list-style: none;
         padding-left: 0;
         > li {

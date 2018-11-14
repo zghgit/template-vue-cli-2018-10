@@ -18,7 +18,7 @@ import Router from 'vue-router';
  // * 13、workStatistics   系统管理-模块管理
  **/
 import AlarmMonitorIndexChildren from './alarmMonitor/index'; // 预警监控
-
+import homePageRouterIndexChildren from './homePage/index';
 Vue.use(Router);
 
 export default new Router({
@@ -36,6 +36,7 @@ export default new Router({
                 require(['@/views/homePage'], resolve); // 首页
             }
         },
+        homePageRouterIndexChildren,
         {
             path: '/alarmMonitor',
             name: 'AlarmMonitor',
