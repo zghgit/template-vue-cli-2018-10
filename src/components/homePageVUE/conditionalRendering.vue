@@ -1,22 +1,49 @@
 <template>
-  <div>
-
+  <div class="conditionalRendering">
+<div v-if="iscond">v-if是一个指令，将它添加到一个元素上</div>
+ <div @click="ifClick" v-if="iscond2">v-if 指令，点击我切换v-else指令</div>
+ <div @click="ifClick2" v-else>这里是v-else指令，点击我切换v-if</div>
+  <div v-if="type === 'A'">
+  A
+</div>
+<div v-else-if="type === 'B'">
+  B -- v-else-if
+</div>
+<div v-else-if="type === 'C'">
+  C -- v-else-if
+</div>
+<div v-else>
+  Not A/B/C -- v-else-if
+</div>
+<div>
+  <div></div>
+</div>
+  
   </div>
 </template>
 <script>
 export default {
-  name: "",
+  name: "conditional-rendering",
   props: {},
   components: {},
   mixins: [],
   data() {
     return {
-      dd: ""
+      iscond: true,
+      iscond2: true,
+      type: "C"
     };
   },
   computed: {},
   watch: {},
-  methods: {},
+  methods: {
+    ifClick() {
+      this.iscond2 = !this.iscond2;
+    },
+    ifClick2() {
+      this.iscond2 = !this.iscond2;
+    }
+  },
   created() {},
   mounted() {},
   beforeDestroy() {}
