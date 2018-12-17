@@ -4,20 +4,22 @@
 // 首页子页面
 const homePageRouter = {
     path: '/homePage',
+    label: '首页',
     name: '首页',
     component: function (resolve) {
         require(['@/router/homePage/index.vue'], resolve)
     },
     children: [{
-            path: '/classStyle',
-            name: '样式绑定',
-            component: function (resolve) {
-                require(['@/components/homePageVUE/classStyle.vue'], resolve)
-            }
-        },
-        {
+        path: '/classStyle',
+        label: '样式绑定',
+        name: '样式绑定',
+        component: function (resolve) {
+            require(['@/components/homePageVUE/classStyle.vue'], resolve)
+        }
+    }, {
             path: '/conditionalRendering',
-            name: '条件渲染',
+            name: '预警监控',
+            label: '预警监控',
             component: function (resolve) {
                 require(['@/components/homePageVUE/conditionalRendering.vue'], resolve)
             }

@@ -16,7 +16,8 @@
   Not A/B/C -- v-else-if
 </div>
 <div>
-  <div></div>
+  <div></div><!-- 阻止单击事件继续传播 -->
+<a v-on:click.stop="doThis">阻止单击事件继续传播</a>
 </div>
   
   </div>
@@ -42,6 +43,9 @@ export default {
     },
     ifClick2() {
       this.iscond2 = !this.iscond2;
+    },
+    doThis() {
+      console.log(111);
     }
   },
   created() {},

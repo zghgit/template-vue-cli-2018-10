@@ -1,25 +1,22 @@
 <!--按钮-->
 <template>
-    <div class="button-coloer">
-        按钮
-    </div>
+    <div class="button-coloer">按钮</div>
 </template>
 <script>
 export default {
-  name: "button-coloer",
-  components: {},
-  computed: {},
-  data() {
-    return {};
+    name: 'button-coloer',
+    components: {},
+    computed: {},
+    data() {
+      return {};
   },
-  mounted() {},
-  methods: {}
+    mounted() {},
+    methods: {}
 };
 </script>
 <style lang="less" scoped>
-@import "../../assets/style/config.less"; // 引入全局样式
-
-p {
+@import '../../assets/style/config.less';     // 引入全局样式
+  p {
   font-size: @g-fontSize;
   width: 500px;
 }
